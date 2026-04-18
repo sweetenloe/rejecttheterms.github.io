@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Amazon logo tile</title>
+  <desc id="desc">Black square tile with Amazon wordmark and orange smile arrow.</desc>
+  <rect width="512" height="512" rx="44" fill="#111111"/>
+  <text x="256" y="245" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="94" font-weight="700" fill="#ffffff">amazon</text>
+  <path d="M134 304c48 38 115 54 188 45 25-3 48-9 69-18 7-3 14 6 8 12-20 19-53 34-93 41-69 12-135-4-184-43-7-6 4-43 12-37z" fill="#ff9900" opacity="0.98"/>
+  <path d="M320 318c19-1 36 6 48 18l-20 8 6 21c-13-12-21-28-20-47l-14 0z" fill="#ff9900"/>
+</svg>
