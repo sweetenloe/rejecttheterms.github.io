@@ -1,0 +1,1 @@
+<div style="text-align: center;"><a href="https://rejecttheterms.com">Visit Reject The Terms</a></div>
