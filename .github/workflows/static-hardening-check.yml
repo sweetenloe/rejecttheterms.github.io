@@ -1,0 +1,43 @@
+name: Static hardening check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  hardening-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Block risky static-site patterns
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          echo "Checking for risky patterns in static files..."
+
+          HTML_FILES=$(find . -type f -name '*.html' -not -path './.git/*' || true)
+
+          if [ -n "$HTML_FILES" ] && grep -RInE '<script|on[a-zA-Z]+\s*=|<iframe|<object|<embed|<form|javascript:' $HTML_FILES; then
+            echo "Risky active content found. Remove scripts, inline handlers, frames, plugins, forms, or javascript: URLs."
+            exit 1
+          fi
+
+          if grep -RInE 'http://|https://(?!rejecttheterms\.com|www\.rejecttheterms\.com)' . --include='*.html' --include='*.css' --include='*.xml' --include='*.txt'; then
+            echo "External or insecure URL found. Keep assets local and use only approved first-party URLs."
+            exit 1
+          fi
+
+          if find . -type f \( -name '*.js' -o -name '*.mjs' -o -name '*.cjs' \) -not -path './.git/*' | grep .; then
+            echo "JavaScript files are blocked for this hardened static site."
+            exit 1
+          fi
+
+          echo "Static hardening checks passed."
