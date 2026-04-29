@@ -3,18 +3,28 @@
 <head>
   <meta charset="utf-8">
   <title>Reject the Terms</title>
-  <meta name="description" content="Tech, privacy, and security.">
+  <meta name="description" content="Privacy-focused writing on consent, surveillance defaults, and the fine print that follows everyday technology.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <canvas class="matrix-wallpaper" id="matrix-wallpaper" aria-hidden="true"></canvas>
+  <div class="parallax-stage" aria-hidden="true">
+    <div class="parallax-layer layer-grid" data-depth="0.08"></div>
+    <div class="parallax-layer layer-frame layer-frame--one" data-depth="0.16"></div>
+    <div class="parallax-layer layer-frame layer-frame--two" data-depth="-0.1"></div>
+    <div class="parallax-layer layer-terminal" data-depth="0.22"></div>
+    <div class="parallax-layer layer-docs" data-depth="-0.18"></div>
+  </div>
+
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="container site-header__inner">
       <a class="brand" href="index.html" aria-label="Reject the Terms home">
+        <span class="brand__prompt">root@reject:~$</span>
         <span class="brand__name">Reject the Terms</span>
-        <span class="brand__sub">RejectTheTerms.com</span>
       </a>
 
       <button class="nav-toggle" type="button" aria-label="Open navigation">Menu</button>
@@ -23,6 +33,8 @@
         <ul>
           <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="articles.html">Articles</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="recommendations.html">Recommendations</a></li>
         </ul>
       </nav>
     </div>
@@ -31,72 +43,74 @@
   <main id="main">
     <section class="hero">
       <div class="container hero__inner">
-        <p class="hero__eyebrow">Privacy / Technology / Security</p>
-        <h1 class="hero__title scramble-title" aria-label="Reject The Terms" tabindex="0">
-          <span class="scramble-letter" aria-hidden="true" style="--s1:'R'; --s2:'7'; --s3:'#'; --s4:'K'; --s5:'4';">R</span><span class="scramble-letter" aria-hidden="true" style="--s1:'3'; --s2:'E'; --s3:'*'; --s4:'9'; --s5:'L';">e</span><span class="scramble-letter" aria-hidden="true" style="--s1:'J'; --s2:'?'; --s3:'1'; --s4:'X'; --s5:'+';">j</span><span class="scramble-letter" aria-hidden="true" style="--s1:'E'; --s2:'0'; --s3:'%'; --s4:'V'; --s5:'2';">e</span><span class="scramble-letter" aria-hidden="true" style="--s1:'C'; --s2:'<'; --s3:'8'; --s4:'Q'; --s5:'=';">c</span><span class="scramble-letter" aria-hidden="true" style="--s1:'T'; --s2:'!'; --s3:'5'; --s4:'Z'; --s5:'/';">t</span><span class="scramble-space" aria-hidden="true"> </span><span class="scramble-letter" aria-hidden="true" style="--s1:'T'; --s2:'6'; --s3:'>'; --s4:'N'; --s5:'@';">T</span><span class="scramble-letter" aria-hidden="true" style="--s1:'H'; --s2:'$'; --s3:'A'; --s4:'3'; --s5:'|';">h</span><span class="scramble-letter" aria-hidden="true" style="--s1:'E'; --s2:'9'; --s3:'_'; --s4:'M'; --s5:'0';">e</span><span class="scramble-space" aria-hidden="true"> </span><span class="scramble-letter" aria-hidden="true" style="--s1:'T'; --s2:'+'; --s3:'2'; --s4:'Y'; --s5:'[';">T</span><span class="scramble-letter" aria-hidden="true" style="--s1:'E'; --s2:'&'; --s3:'7'; --s4:'P'; --s5:']';">e</span><span class="scramble-letter" aria-hidden="true" style="--s1:'R'; --s2:'4'; --s3:'^'; --s4:'B'; --s5:'?';">r</span><span class="scramble-letter" aria-hidden="true" style="--s1:'M'; --s2:'~'; --s3:'8'; --s4:'D'; --s5:'%';">m</span><span class="scramble-letter" aria-hidden="true" style="--s1:'S'; --s2:'5'; --s3:'*'; --s4:'W'; --s5:'}';">s</span>
-        </h1>
-      </div>
-    </section>
-
-    <section class="section" id="featured">
-      <div class="container">
-        <div class="section-head">
-          <div>
-            <p class="section-label">Featured</p>
-            <h2>Latest focus</h2>
+        <div class="terminal-window hero-console">
+          <div class="terminal-window__bar">
+            <span></span>
+            <span></span>
+            <span></span>
+            <p>/usr/local/reject/briefing</p>
           </div>
-          <p>Privacy, security, and the systems that turn everyday use into data.</p>
-        </div>
+          <div class="hero-console__body">
+            <p class="meta-line"><span>status</span> static / privacy-first / no accounts</p>
+            <p class="meta-line"><span>scope</span> terms, trackers, consent, defaults</p>
+            <p class="meta-line"><span>mode</span> read closely; refuse casually</p>
 
-        <div class="featured-grid">
-          <article class="card">
-            <a href="article-passwords.html">
-              <div class="card__image-wrap">
-                <img src="images/thumb-passwords.jpg" alt="Atmospheric thumbnail for Between Passwords and Paranoia">
-                <div class="card__overlay-text">credentials / friction / trust</div>
-              </div>
-              <div class="card__body">
-                <p class="card__meta">Featured article</p>
-                <h3 class="card__title">Between Passwords and Paranoia</h3>
-                <p class="card__summary">
-                  Security and convenience aren't enemies; they're just different ways of trusting the same machine.
-                </p>
-              </div>
-            </a>
-          </article>
+            <h1 class="hero__title scramble-title" aria-label="Reject The Terms" tabindex="0">
+              <span class="scramble-letter" aria-hidden="true" style="--s1:'R'; --s2:'7'; --s3:'#'; --s4:'K'; --s5:'4';">R</span><span class="scramble-letter" aria-hidden="true" style="--s1:'3'; --s2:'E'; --s3:'*'; --s4:'9'; --s5:'L';">e</span><span class="scramble-letter" aria-hidden="true" style="--s1:'J'; --s2:'?'; --s3:'1'; --s4:'X'; --s5:'+';">j</span><span class="scramble-letter" aria-hidden="true" style="--s1:'E'; --s2:'0'; --s3:'%'; --s4:'V'; --s5:'2';">e</span><span class="scramble-letter" aria-hidden="true" style="--s1:'C'; --s2:'<'; --s3:'8'; --s4:'Q'; --s5:'=';">c</span><span class="scramble-letter" aria-hidden="true" style="--s1:'T'; --s2:'!'; --s3:'5'; --s4:'Z'; --s5:'/';">t</span><span class="scramble-space" aria-hidden="true"> </span><span class="scramble-letter" aria-hidden="true" style="--s1:'T'; --s2:'6'; --s3:'>'; --s4:'N'; --s5:'@';">T</span><span class="scramble-letter" aria-hidden="true" style="--s1:'H'; --s2:'$'; --s3:'A'; --s4:'3'; --s5:'|';">h</span><span class="scramble-letter" aria-hidden="true" style="--s1:'E'; --s2:'9'; --s3:'_'; --s4:'M'; --s5:'0';">e</span><span class="scramble-space" aria-hidden="true"> </span><span class="scramble-letter" aria-hidden="true" style="--s1:'T'; --s2:'+'; --s3:'2'; --s4:'Y'; --s5:'[';">T</span><span class="scramble-letter" aria-hidden="true" style="--s1:'E'; --s2:'&'; --s3:'7'; --s4:'P'; --s5:']';">e</span><span class="scramble-letter" aria-hidden="true" style="--s1:'R'; --s2:'4'; --s3:'^'; --s4:'B'; --s5:'?';">r</span><span class="scramble-letter" aria-hidden="true" style="--s1:'M'; --s2:'~'; --s3:'8'; --s4:'D'; --s5:'%';">m</span><span class="scramble-letter" aria-hidden="true" style="--s1:'S'; --s2:'5'; --s3:'*'; --s4:'W'; --s5:'}';">s</span>
+            </h1>
 
-          <article class="card card--compact">
-            <a href="article-walmart-vizio.html">
-              <div class="card__image-wrap">
-                <img src="images/thumb-walmart-vizio.png" alt="Atmospheric thumbnail for Walmart and Vizio article">
-                <div class="card__overlay-text">retail / recognition / prediction</div>
-              </div>
-              <div class="card__body">
-                <p class="card__meta">Article</p>
-                <h3 class="card__title">When Walmart Met Vizio</h3>
-                <p class="card__summary">What you watch can now shape what you're sold.</p>
-              </div>
-            </a>
-          </article>
+            <p class="hero__copy">A quiet archive for refusing coercive defaults, reading the machinery behind consent, and keeping privacy from becoming a decorative checkbox.</p>
+
+            <div class="hero__actions" aria-label="Primary actions">
+              <a class="terminal-link" href="articles.html">./open articles</a>
+              <a class="terminal-link" href="#status">systemctl status</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="parallax-band" aria-hidden="true">
-      <div class="container parallax-band__inner"></div>
+    <section class="section section--status" id="status">
+      <div class="container split-grid">
+        <div>
+          <p class="section-label">System Status</p>
+          <h2>systemctl list-units</h2>
+          <p class="section-copy">The interface is minimal by design: static pages, durable links, no profiles, no comments, and no analytics theater.</p>
+        </div>
+
+        <div class="terminal-window status-panel">
+          <div class="terminal-window__bar">
+            <span></span>
+            <span></span>
+            <span></span>
+            <p>units --type=service,target,mount,timer,path</p>
+          </div>
+          <pre aria-label="systemctl list-units output"><code>UNIT              LOAD   ACTIVE SUB     DESCRIPTION
+privacy.service   loaded active running Reader privacy boundary
+consent.target    loaded active active  Consent is explicit
+tracking.mount    loaded masked masked  Third-party tracking surface
+fineprint.timer   loaded active waiting Review recurring obligations
+optout.path       loaded active watching Exit routes and refusal paths
+archive.service   loaded active running Static public record
+
+LOAD   = reflected from static files
+ACTIVE = visible without accounts
+SUB    = no server process required</code></pre>
+        </div>
+      </div>
     </section>
 
-    <section class="section" id="articles">
+    <section class="section" id="transmissions">
       <div class="container">
         <div class="section-head">
           <div>
-            <p class="section-label">Articles</p>
-            <h2>Articles</h2>
+            <p class="section-label">Latest Articles</p>
+            <h2>Transmissions</h2>
           </div>
-          <p>Tech, privacy, and security writing.</p>
+          <p>Field notes from the places where convenience becomes policy.</p>
         </div>
 
-        <div class="article-list">
+        <div class="article-list article-list--cards">
           <article class="article-row">
             <a class="article-row__thumb" href="article-passwords.html">
               <img src="images/thumb-passwords.jpg" alt="Atmospheric thumbnail for Between Passwords and Paranoia">
@@ -104,9 +118,7 @@
             <div class="article-row__body">
               <p class="article-meta">Security / usability</p>
               <h3 class="article-row__title"><a href="article-passwords.html">Between Passwords and Paranoia</a></h3>
-              <p class="article-row__summary">
-                Security and convenience aren't enemies; they're just different ways of trusting the same machine.
-              </p>
+              <p class="article-row__summary">Security and convenience aren't enemies; they're just different ways of trusting the same machine.</p>
               <a class="text-link" href="article-passwords.html">Read article</a>
             </div>
           </article>
@@ -134,18 +146,25 @@
               <a class="text-link" href="article-linux-mess.html">Read article</a>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
 
-          <article class="article-row">
-            <a class="article-row__thumb" href="article-consent-exhaustion.html">
-              <img src="images/thumb-sheep.jpg" alt="Sheep illustration for Consent by Exhaustion">
-            </a>
-            <div class="article-row__body">
-              <p class="article-meta">Consent / design / privacy</p>
-              <h3 class="article-row__title"><a href="article-consent-exhaustion.html">Consent by Exhaustion</a></h3>
-              <p class="article-row__summary">A cookie banner can look like choice while making the private option harder to reach.</p>
-              <a class="text-link" href="article-consent-exhaustion.html">Read article</a>
-            </div>
-          </article>
+    <section class="section section--about">
+      <div class="container split-grid split-grid--reverse">
+        <div class="terminal-window note-panel">
+          <div class="terminal-window__bar">
+            <span></span>
+            <span></span>
+            <span></span>
+            <p>why.txt</p>
+          </div>
+          <p>Most terms are written for submission, not comprehension. Reject the Terms exists to slow the click, name the mechanism, and preserve a record of how ordinary interfaces ask for extraordinary permission.</p>
+        </div>
+        <div>
+          <p class="section-label">Why this exists</p>
+          <h2>Consent should not be a maze.</h2>
+          <p class="section-copy">The site keeps attention on privacy, ownership, security, and refusal. It is intentionally static: no accounts, no comment system, no server-side collection layer, and no decorative complexity pretending to be trust.</p>
         </div>
       </div>
     </section>
@@ -154,7 +173,7 @@
   <footer class="site-footer">
     <div class="container site-footer__inner">
       <p>Reject the Terms</p>
-      <p>Read closely. Refuse casually.</p>
+      <p>Static pages. Minimal surface. No accounts.</p>
     </div>
   </footer>
 </body>
