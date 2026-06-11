@@ -3,79 +3,214 @@
 <head>
   <meta charset="utf-8">
   <title>Reject the Terms</title>
-  <meta name="description" content="Privacy-focused writing on consent, surveillance defaults, and the fine print that follows everyday technology.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .front-page {
-      height: 100svh;
-      overflow: hidden;
-    }
-
-    .front-page main {
-      height: 100svh;
-      padding-top: 0;
-      overflow: hidden;
-    }
-
-    .front-page .hero {
-      height: 100svh;
-      min-height: 100svh;
-      border-bottom: 0;
-    }
-
-    .front-page .hero__inner {
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
-
-    .front-page .hero-console {
-      max-width: 1100px;
-      text-align: center;
-    }
-
-    .front-page .hero__title {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .front-page .hero-meta {
-      display: inline-block;
-      text-align: left;
-    }
-
-    .front-page .hero__copy {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  </style>
+  <meta name="description" content="A critical take on aggressive consent screens and forced acceptance." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
 </head>
-<body class="front-page">
-  <canvas class="matrix-wallpaper" id="matrix-wallpaper" aria-hidden="true"></canvas>
-  <div class="parallax-stage" aria-hidden="true">
-    <div class="parallax-layer layer-grid" data-depth="0.08"></div>
-    <div class="parallax-layer layer-frame layer-frame--one" data-depth="0.16"></div>
-    <div class="parallax-layer layer-frame layer-frame--two" data-depth="-0.1"></div>
-    <div class="parallax-layer layer-terminal" data-depth="0.22"></div>
-    <div class="parallax-layer layer-docs" data-depth="-0.18"></div>
+<body class="terms-page">
+  <div class="background-shell" aria-hidden="true">
+    <div class="background-dim"></div>
+    <div class="background-app">
+      <main class="background-main">
+        <section class="background-hero">
+          <p>Editorial work on fine print, consent fatigue, surveillance defaults, and the systems that hide behind routine clicks.</p>
+        </section>
+        <section class="background-articles">
+          <article class="background-card">
+            <div class="background-card__bar">SECURITY / USABILITY</div>
+            <div class="background-card__content">
+              <a class="background-card__image" href="article-passwords.html"><img src="images/thumb-passwords.jpg" alt="Atmospheric thumbnail for Between Passwords and Paranoia"></a>
+              <div class="background-card__text">
+                <h2><a href="article-passwords.html">Between Passwords and Paranoia</a></h2>
+                <p>Security and convenience aren't enemies; they're just different ways of trusting the same machine.</p>
+                <a class="background-card__link" href="article-passwords.html">READ ARTICLE ►</a>
+              </div>
+            </div>
+          </article>
+          <article class="background-card">
+            <div class="background-card__bar">DATA / ADVERTISING / PROFILING</div>
+            <div class="background-card__content">
+              <a class="background-card__image" href="article-walmart-vizio.html"><img src="images/thumb-walmart-vizio.png" alt="Atmospheric thumbnail for Walmart and Vizio article"></a>
+              <div class="background-card__text">
+                <h2><a href="article-walmart-vizio.html">When Walmart Met Vizio: The Future of Data and the Intrusive Nature to Come</a></h2>
+                <p>What you watch can now shape what you're sold.</p>
+                <a class="background-card__link" href="article-walmart-vizio.html">READ ARTICLE ►</a>
+              </div>
+            </div>
+          </article>
+          <article class="background-card">
+            <div class="background-card__bar">LINUX / OWNERSHIP / LEARNING</div>
+            <div class="background-card__content">
+              <a class="background-card__image" href="article-linux-mess.html"><img src="images/thumb-linux.jpg" alt="Vintage computer desk illustration for My First Linux Mess"></a>
+              <div class="background-card__text">
+                <h2><a href="article-linux-mess.html">My First Linux Mess</a></h2>
+                <p>Linux stopped feeling like a warning sign and started feeling like an open door.</p>
+                <a class="background-card__link" href="article-linux-mess.html">READ ARTICLE ►</a>
+              </div>
+            </div>
+          </article>
+          <article class="background-card">
+            <div class="background-card__bar">CONSENT / DESIGN / PRIVACY</div>
+            <div class="background-card__content">
+              <a class="background-card__image" href="article-consent-exhaustion.html"><img src="images/thumb-sheep.jpg" alt="Sheep illustration for Consent by Exhaustion"></a>
+              <div class="background-card__text">
+                <h2><a href="article-consent-exhaustion.html">Consent by Exhaustion</a></h2>
+                <p>A cookie banner can look like choice while making the private option harder to reach.</p>
+                <a class="background-card__link" href="article-consent-exhaustion.html">READ ARTICLE ►</a>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
   </div>
 
-  <a class="hidden-articles-link" href="articles.html" aria-label="Open articles" style="z-index:200"></a>
-
-  <main id="main">
-    <section class="hero">
-      <div class="container hero__inner">
-        <div class="hero-console">
-          <h1 class="hero__title scramble-title" aria-label="Reject The Terms" tabindex="0">
-            <span class="scramble-letter" aria-hidden="true" style="--s1:'R'; --s2:'7'; --s3:'#'; --s4:'K'; --s5:'4';">R</span><span class="scramble-letter" aria-hidden="true" style="--s1:'3'; --s2:'E'; --s3:'*'; --s4:'9'; --s5:'L';">e</span><span class="scramble-letter" aria-hidden="true" style="--s1:'J'; --s2:'?'; --s3:'1'; --s4:'X'; --s5:'+';">j</span><span class="scramble-letter" aria-hidden="true" style="--s1:'E'; --s2:'0'; --s3:'%'; --s4:'V'; --s5:'2';">e</span><span class="scramble-letter" aria-hidden="true" style="--s1:'C'; --s2:'<'; --s3:'8'; --s4:'Q'; --s5:'=';">c</span><span class="scramble-letter" aria-hidden="true" style="--s1:'T'; --s2:'!'; --s3:'5'; --s4:'Z'; --s5:'/';">t</span><span class="scramble-space" aria-hidden="true"> </span><span class="scramble-letter" aria-hidden="true" style="--s1:'T'; --s2:'6'; --s3:'>'; --s4:'N'; --s5:'@';">T</span><span class="scramble-letter" aria-hidden="true" style="--s1:'H'; --s2:'$'; --s3:'A'; --s4:'3'; --s5:'|';">h</span><span class="scramble-letter" aria-hidden="true" style="--s1:'E'; --s2:'9'; --s3:'_'; --s4:'M'; --s5:'0';">e</span><span class="scramble-space" aria-hidden="true"> </span><span class="scramble-letter" aria-hidden="true" style="--s1:'T'; --s2:'+'; --s3:'2'; --s4:'Y'; --s5:'[';">T</span><span class="scramble-letter" aria-hidden="true" style="--s1:'E'; --s2:'&'; --s3:'7'; --s4:'P'; --s5:']';">e</span><span class="scramble-letter" aria-hidden="true" style="--s1:'R'; --s2:'4'; --s3:'^'; --s4:'B'; --s5:'?';">r</span><span class="scramble-letter" aria-hidden="true" style="--s1:'M'; --s2:'~'; --s3:'8'; --s4:'D'; --s5:'%';">m</span><span class="scramble-letter" aria-hidden="true" style="--s1:'S'; --s2:'5'; --s3:'*'; --s4:'W'; --s5:'}';">s</span>
-          </h1>
-          <p class="hero__copy">An archive for challenging default-driven consent.</p>
+  <div class="terms-shell">
+    <div class="terms-layout">
+      <div class="window main-window">
+        <div class="window-bar">
+          <div class="window-controls"><span></span><span></span><span></span></div>
+          <div class="window-title">Microsoft Internet Explorer - Terms and Conditions Agreement</div>
         </div>
-      </div>
-    </section>
+        <div class="browser-toolbar" aria-hidden="true">
+          <span>Back</span><span>Forward</span><span>Stop</span><span>Refresh</span><span>Home</span>
+          <div class="address-bar">http://rejecttheterms.example/agree-now/default.asp</div>
+        </div>
+        <div class="window-body">
+          <header class="terms-header">
+            <p class="terms-label">TERMS AND CONDITIONS</p>
+            <p class="terms-copy">Please read the following terms and conditions carefully before using this website. By accessing or using this website, you agree to be bound by these terms and conditions and our privacy disclosures.</p>
+            <div class="terms-marquee" aria-hidden="true">*** IMPORTANT: ACCEPTANCE REQUIRED TO CONTINUE *** CLICK OK TO RESTORE FULL ACCESS ***</div>
+          </header>
+          <div class="terms-columns">
+            <div>
+              <h3>1. Acceptance of Terms</h3>
+              <p>By using this website, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. If you do not agree to these terms, you must not access or use this website.</p>
 
-  </main>
+              <h3>2. User Responsibilities</h3>
+              <p>You agree to use this website only for lawful purposes and in a manner that does not infringe the rights of others. You must not attempt to disrupt, interfere with, or gain unauthorized access to any portion of the website.</p>
+
+              <h3>3. Content Usage</h3>
+              <p>All content on this website, including text, images, and interface elements, is provided for informational purposes only. Use of the content does not grant any ownership or permission beyond the right to view the site.</p>
+            </div>
+            <div>
+              <h3>4. Privacy and Data</h3>
+              <p>Your use of this website is also governed by the Privacy Policy. By using the website, you consent to the collection, use, and limited disclosure of data necessary to operate the site.</p>
+
+              <h3>5. Limitation of Liability</h3>
+              <p>To the fullest extent permitted by law, this website and its owners are not liable for any direct, indirect, incidental, or consequential damages arising from your use of the site.</p>
+
+              <h3>6. Governing Law</h3>
+              <p>These terms are governed by the laws that apply to the operator of this website, without regard to conflict of law principles.</p>
+            </div>
+          </div>
+          <div class="accept-controls">
+            <div class="action-buttons">
+              <button type="button" data-accept>Accept</button>
+              <button type="button" data-accept>I Agree</button>
+              <button type="button" data-accept>Continue</button>
+              <button type="button" data-accept>Accept & Enter</button>
+              <button type="button" data-accept>Yes, I Accept</button>
+            </div>
+            <div class="fake-progress">
+              <span class="progress-label">Acceptance Progress</span>
+              <div class="progress-bar"><span></span></div>
+            </div>
+            <div class="fake-links">
+              <a href="#" data-accept>Click here to agree</a>
+              <a href="#" data-accept>Confirm acceptance</a>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="reject-button" data-reject aria-label="Reject terms and enter site">reject</button>
+      </div>
+
+      <div class="popup popup-fast">
+        <div class="popup-title">Fast Access!</div>
+        <p>Don't miss out! Accept now for instant access. This offer expires when you move the mouse.</p>
+        <button type="button" data-accept>Accept Now »</button>
+      </div>
+
+      <div class="popup popup-oneclick">
+        <div class="popup-title">One Click Access</div>
+        <p>One click is all it takes to unlock this website. Recommended by our setup wizard.</p>
+        <button type="button" data-accept>Click Here to Agree</button>
+      </div>
+
+      <div class="popup popup-required">
+        <div class="popup-title">You Must Agree</div>
+        <p>You must accept the Terms and Conditions to proceed.</p>
+        <button type="button" data-accept>OK</button>
+      </div>
+
+      <div class="popup popup-final">
+        <div class="popup-title">Final Acceptance Required</div>
+        <p>Access is not available until you complete final acceptance of the Terms and Conditions.</p>
+        <button type="button" data-accept>Accept</button>
+      </div>
+
+      <div class="popup popup-still">
+        <div class="popup-title">Still Here?</div>
+        <p>What are you waiting for? Accept already!</p>
+        <button type="button" data-accept>I Accept Already!</button>
+      </div>
+
+      <div class="popup popup-urgent">
+        <div class="popup-title">Important!</div>
+        <p>Your acceptance is legally required to continue.</p>
+        <button type="button" data-accept>Agree Now</button>
+      </div>
+
+      <div class="popup popup-proceed">
+        <div class="popup-title">Proceed?</div>
+        <p>Accept to proceed. Proceed to accept.</p>
+        <button type="button" data-accept>Proceed</button>
+      </div>
+
+      <div class="popup popup-secure">
+        <div class="popup-title">Secure Your Access</div>
+        <p>Accept the Terms and Conditions to unlock full access.</p>
+        <button type="button" data-accept>Accept and Enter Site</button>
+      </div>
+
+      <div class="popup popup-whywait">
+        <div class="popup-title">Why Wait?</div>
+        <p>Join thousands of users who accepted already. Don't get left behind!</p>
+        <button type="button" data-accept>Accept & Continue</button>
+      </div>
+
+      <div class="popup popup-almost">
+        <div class="popup-title">Almost Done!</div>
+        <p>Just one more step! Accept to finish.</p>
+        <button type="button" data-accept>Finish & Enter</button>
+      </div>
+      <div class="popup popup-bait popup-hot">
+        <div class="popup-title">FREE Privacy Scan</div>
+        <p>Your consent settings may be out of date. Run instant acceptance repair now.</p>
+        <button type="button" data-accept>Repair Settings</button>
+      </div>
+
+      <div class="popup popup-confirm popup-warning">
+        <div class="popup-title">Security Warning</div>
+        <p>Unsigned choice detected. To protect your experience, confirm agreement.</p>
+        <button type="button" data-accept>Yes</button>
+      </div>
+
+      <div class="popup popup-download popup-hot">
+        <div class="popup-title">Download Complete</div>
+        <p>terms_update.exe is ready. Click OK to install required policy components.</p>
+        <button type="button" data-accept>OK</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog-overlay hidden" data-accept-dialog aria-hidden="true" role="alertdialog" aria-modal="true" aria-labelledby="accept-dialog-title">
+    <div class="dialog-box">
+      <p id="accept-dialog-title">Please accept the terms and conditions</p>
+      <p>You must accept the terms and conditions to continue. This prompt will continue to appear until you accept.</p>
+      <div class="dialog-actions"><button type="button" data-accept-ok>OK</button></div>
+    </div>
+  </div>
 </body>
 </html>

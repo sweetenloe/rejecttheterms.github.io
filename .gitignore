@@ -1,2 +1,5 @@
 writing-topics.local.md
 .history/
+__pycache__/
+.site-backups/
+.article-uploader-work/

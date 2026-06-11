@@ -59,7 +59,7 @@
     }
   }
 
-  function start() {
+  function startMatrix() {
     if (reduceMotion.matches) {
       if (canvas) canvas.setAttribute("hidden", "");
       return;
@@ -77,8 +77,72 @@
     window.cancelAnimationFrame(animationFrame);
     animationFrame = 0;
     matrixFrame = 0;
-    start();
+    startMatrix();
   });
 
-  start();
+  startMatrix();
+})();
+
+(function () {
+  function showAcceptDialog(dialog) {
+    if (!dialog) return;
+    dialog.classList.remove("hidden");
+    dialog.setAttribute("aria-hidden", "false");
+    const button = dialog.querySelector("[data-accept-ok]");
+    if (button) button.focus();
+  }
+
+  function hideAcceptDialog(dialog) {
+    if (!dialog) return;
+    dialog.classList.add("hidden");
+    dialog.setAttribute("aria-hidden", "true");
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const acceptControls = Array.from(document.querySelectorAll("[data-accept]"));
+    const rejectControl = document.querySelector("[data-reject]");
+    const dialog = document.querySelector("[data-accept-dialog]");
+    const dialogOk = document.querySelector("[data-accept-ok]");
+
+    acceptControls.forEach((control) => {
+      const showDialog = (event) => {
+        if (event) event.preventDefault();
+        showAcceptDialog(dialog);
+      };
+
+      if (control.tagName === "INPUT") {
+        control.addEventListener("change", showDialog);
+        control.addEventListener("click", showDialog);
+      } else {
+        control.addEventListener("click", showDialog);
+      }
+    });
+
+    if (dialogOk) {
+      dialogOk.addEventListener("click", function (event) {
+        event.preventDefault();
+        hideAcceptDialog(dialog);
+      });
+    }
+
+    if (dialog) {
+      dialog.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          hideAcceptDialog(dialog);
+        }
+      });
+
+      dialog.addEventListener("click", function (event) {
+        if (event.target === dialog) {
+          hideAcceptDialog(dialog);
+        }
+      });
+    }
+
+    if (rejectControl) {
+      rejectControl.addEventListener("click", function () {
+        window.location.href = "articles.html";
+      });
+    }
+  });
 })();
