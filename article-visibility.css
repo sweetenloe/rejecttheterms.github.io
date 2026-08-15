@@ -1,0 +1,18 @@
+/* Reading-page image and article-specific spacing tweaks. */
+.article-hero::before {
+  background: linear-gradient(rgba(232, 224, 202, .72), rgba(232, 224, 202, .84)), var(--article-image);
+  background-size: cover;
+  background-position: center;
+}
+
+.article-lines {
+  margin: 1.5rem 0 1.8rem;
+}
+
+.article-lines p {
+  margin: 0;
+}
+
+.article-lines p + p {
+  margin-top: .18rem;
+}
