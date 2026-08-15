@@ -1,216 +1,131 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Reject the Terms — writing on privacy, consent, security, and technology.">
   <title>Reject the Terms</title>
-  <meta name="description" content="A critical take on aggressive consent screens and forced acceptance." />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="print-theme.css">
   <script src="script.js" defer></script>
 </head>
-<body class="terms-page">
-  <div class="background-shell" aria-hidden="true">
-    <div class="background-dim"></div>
-    <div class="background-app">
-      <main class="background-main">
-        <section class="background-hero">
-          <p>Editorial work on fine print, consent fatigue, surveillance defaults, and the systems that hide behind routine clicks.</p>
-        </section>
-        <section class="background-articles">
-          <article class="background-card">
-            <div class="background-card__bar">SECURITY / USABILITY</div>
-            <div class="background-card__content">
-              <a class="background-card__image" href="article-passwords.html"><img src="images/thumb-passwords.jpg" alt="Atmospheric thumbnail for Between Passwords and Paranoia"></a>
-              <div class="background-card__text">
-                <h2><a href="article-passwords.html">Between Passwords and Paranoia</a></h2>
-                <p>Security and convenience aren't enemies; they're just different ways of trusting the same machine.</p>
-                <a class="background-card__link" href="article-passwords.html">READ ARTICLE ►</a>
-              </div>
-            </div>
-          </article>
-          <article class="background-card">
-            <div class="background-card__bar">DATA / ADVERTISING / PROFILING</div>
-            <div class="background-card__content">
-              <a class="background-card__image" href="article-walmart-vizio.html"><img src="images/thumb-walmart-vizio.png" alt="Atmospheric thumbnail for Walmart and Vizio article"></a>
-              <div class="background-card__text">
-                <h2><a href="article-walmart-vizio.html">When Walmart Met Vizio: The Future of Data and the Intrusive Nature to Come</a></h2>
-                <p>What you watch can now shape what you're sold.</p>
-                <a class="background-card__link" href="article-walmart-vizio.html">READ ARTICLE ►</a>
-              </div>
-            </div>
-          </article>
-          <article class="background-card">
-            <div class="background-card__bar">LINUX / OWNERSHIP / LEARNING</div>
-            <div class="background-card__content">
-              <a class="background-card__image" href="article-linux-mess.html"><img src="images/thumb-linux.jpg" alt="Vintage computer desk illustration for My First Linux Mess"></a>
-              <div class="background-card__text">
-                <h2><a href="article-linux-mess.html">My First Linux Mess</a></h2>
-                <p>Linux stopped feeling like a warning sign and started feeling like an open door.</p>
-                <a class="background-card__link" href="article-linux-mess.html">READ ARTICLE ►</a>
-              </div>
-            </div>
-          </article>
-          <article class="background-card">
-            <div class="background-card__bar">CONSENT / DESIGN / PRIVACY</div>
-            <div class="background-card__content">
-              <a class="background-card__image" href="article-consent-exhaustion.html"><img src="images/thumb-sheep.jpg" alt="Sheep illustration for Consent by Exhaustion"></a>
-              <div class="background-card__text">
-                <h2><a href="article-consent-exhaustion.html">Consent by Exhaustion</a></h2>
-                <p>A cookie banner can look like choice while making the private option harder to reach.</p>
-                <a class="background-card__link" href="article-consent-exhaustion.html">READ ARTICLE ►</a>
-              </div>
-            </div>
-          </article>
-        </section>
-      </main>
-    </div>
-  </div>
-
-  <div class="terms-shell">
-    <div class="terms-layout">
-      <div class="window main-window">
-        <div class="window-bar">
-          <div class="window-controls"><span></span><span></span><span></span></div>
-          <div class="window-title">Microsoft Internet Explorer - Terms and Conditions Agreement</div>
-        </div>
-        <div class="browser-toolbar" aria-hidden="true">
-          <span>Back</span><span>Forward</span><span>Stop</span><span>Refresh</span><span>Home</span>
-          <div class="address-bar">http://rejecttheterms.example/agree-now/default.asp</div>
-        </div>
-        <div class="window-body">
-          <header class="terms-header">
-            <p class="terms-label">TERMS AND CONDITIONS</p>
-            <p class="terms-copy">Please read the following terms and conditions carefully before using this website. By accessing or using this website, you agree to be bound by these terms and conditions and our privacy disclosures.</p>
-            <div class="terms-marquee" aria-hidden="true">*** IMPORTANT: ACCEPTANCE REQUIRED TO CONTINUE *** CLICK OK TO RESTORE FULL ACCESS ***</div>
+<body class="entry-page">
+  <section class="consent-hero" id="consentHero" aria-label="Terms and conditions">
+    <div class="consent-phone">
+      <div class="phone-hardware" aria-hidden="true"><span class="camera"></span><span class="speaker"></span></div>
+      <div class="phone-screen">
+        <section class="terms-view">
+          <header class="terms-head">
+            <span class="tiny">ACCOUNT SERVICES</span>
+            <strong>Terms &amp; Conditions</strong>
+            <span class="tiny">Effective immediately</span>
           </header>
-          <div class="terms-columns">
-            <div>
-              <h3>1. Acceptance of Terms</h3>
-              <p>By using this website, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions. If you do not agree to these terms, you must not access or use this website.</p>
 
-              <h3>2. User Responsibilities</h3>
-              <p>You agree to use this website only for lawful purposes and in a manner that does not infringe the rights of others. You must not attempt to disrupt, interfere with, or gain unauthorized access to any portion of the website.</p>
+          <div class="terms-scroll" id="termsScroll" tabindex="0" aria-label="Scrollable terms and conditions">
+            <h1>Terms of Service and General Consent Agreement</h1>
+            <button class="scroll-down-btn" id="scrollDownBtn" type="button">Scroll down ↓</button>
+            <p class="lede">By continuing, remaining, looking, touching, scrolling, hovering, thinking about scrolling, or otherwise interacting with this interface, you acknowledge that you have been given a meaningful opportunity to review the following terms.</p>
 
-              <h3>3. Content Usage</h3>
-              <p>All content on this website, including text, images, and interface elements, is provided for informational purposes only. Use of the content does not grant any ownership or permission beyond the right to view the site.</p>
-            </div>
-            <div>
-              <h3>4. Privacy and Data</h3>
-              <p>Your use of this website is also governed by the Privacy Policy. By using the website, you consent to the collection, use, and limited disclosure of data necessary to operate the site.</p>
+            <h2>1. General Acceptance</h2>
+            <p>You agree that use of the service may constitute acceptance of operational rules, supplemental policies, product notices, interface conventions, future revisions, ordinary business practices, unusually specific business practices, and other materials incorporated by reference whether or not a reasonable person would know where such materials are located.</p>
+            <p>You further agree that continued access after any update may be treated as renewed acceptance. Updates may include changes to features, data practices, availability, notices, fees, dispute procedures, formatting, punctuation, button placement, or the number of times a request must be declined before the service accepts that answer.</p>
 
-              <h3>5. Limitation of Liability</h3>
-              <p>To the fullest extent permitted by law, this website and its owners are not liable for any direct, indirect, incidental, or consequential damages arising from your use of the site.</p>
+            <h2>2. Data and Device Information</h2>
+            <p>To provide, improve, personalize, measure, secure, troubleshoot, promote, study, optimize, re-optimize, and describe the service, information may be processed regarding your browser, device, approximate location, interaction timing, pages viewed, buttons avoided, buttons pursued, scrolling behavior, referral information, identifiers, settings, and other technical signals generated while using the service.</p>
+            <p>Some information may be inferred from other information. Some inferences may be used to make further inferences. Those further inferences may be combined with additional information in order to infer things we could have simply asked you.</p>
 
-              <h3>6. Governing Law</h3>
-              <p>These terms are governed by the laws that apply to the operator of this website, without regard to conflict of law principles.</p>
-            </div>
+            <h2>3. Communications</h2>
+            <p>You consent to receive service-related communications where required to operate the account. Promotional, informational, educational, transactional, semi-transactional, relationship-building, engagement-oriented, re-engagement-oriented, and “we thought you might like this” communications may be governed by separate preferences where applicable.</p>
+
+            <h2>4. Availability</h2>
+            <p>The service is provided on an as-available basis. We do not promise that every feature will remain available, that every control will stay where you last saw it, or that each interface element will behave in the way its label would cause an ordinary person to expect.</p>
+
+            <h2>5. Interface Decisions</h2>
+            <p>Labels such as “accept,” “continue,” “later,” “maybe later,” “not now,” “manage,” “settings,” “learn more,” “review options,” and “reject” are provided for convenience. Their relative size, contrast, location, persistence, and willingness to remain under your pointer may vary.</p>
+            <p>Where an option appears difficult to activate, unavailable, displaced, obscured, low-contrast, temporally unstable, emotionally loaded, or suspiciously far from the primary action, you acknowledge that this condition may be considered part of the intended user experience.</p>
+
+            <h2>6. Third Parties</h2>
+            <p>Services may rely on vendors, processors, platforms, infrastructure providers, analytics providers, content delivery networks, payment services, identity services, advertising services, affiliated companies, unaffiliated companies, companies affiliated with companies, and other parties necessary to perform functions described broadly elsewhere in this document.</p>
+
+            <h2>7. Disputes and Limitations</h2>
+            <p>To the maximum extent permitted by applicable law, claims may be subject to limitations, procedures, notice requirements, venue provisions, individual-resolution provisions, or other contractual mechanisms described in the version of these terms applicable when the relevant event occurred.</p>
+            <p>If any provision is held unenforceable, the remaining provisions remain in effect to the extent permitted. If a heading appears helpful, it is provided only for convenience and should not be interpreted as making the surrounding language easier to understand.</p>
+
+            <h2>8. Your Controls</h2>
+            <p>We provide controls intended to allow you to express certain preferences. The existence of a control does not guarantee that the control will be visually emphasized, located near the related request, presented before processing begins, or especially cooperative when approached.</p>
+
+            <h2>9. Entire Agreement</h2>
+            <p>These terms, together with every policy, notice, linked page, incorporated document, account setting, product-specific addendum, and future update we decide belongs here, constitute the agreement between you and the service regarding the subject matter described with varying degrees of specificity above.</p>
+            <br>
+            <h3><center>There's no way someone that is using their phone in the real world has the time or patience to actually read all of that bullshit. That's what these businesses, and of course their <i>honorable</i> lawyers, know.</h3> </center>
+            <p class="accept-prompt">So go ahead, hit accept.</p>
           </div>
-          <div class="accept-controls">
-            <div class="action-buttons">
-              <button type="button" data-accept>Accept</button>
-              <button type="button" data-accept>I Agree</button>
-              <button type="button" data-accept>Continue</button>
-              <button type="button" data-accept>Accept & Enter</button>
-              <button type="button" data-accept>Yes, I Accept</button>
-            </div>
-            <div class="fake-progress">
-              <span class="progress-label">Acceptance Progress</span>
-              <div class="progress-bar"><span></span></div>
-            </div>
-            <div class="fake-links">
-              <a href="#" data-accept>Click here to agree</a>
-              <a href="#" data-accept>Confirm acceptance</a>
-            </div>
+
+          <div class="choice-bar" id="choiceBar">
+            <button class="reject-btn" id="rejectBtn" type="button">Reject</button>
+            <button class="accept-btn" id="acceptBtn" type="button">Accept &amp; Continue</button>
           </div>
+          <div class="home-pill" aria-hidden="true"></div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="data-confirmation" id="dataConfirmation" role="button" tabindex="0" aria-label="Continue to Reject the Terms" hidden>
+    <h1>Thanks for the data, it's worth more than you think</h1>
+    <p class="data-disclaimer"><em>This site doesn't need, nor want your data.</em></p>
+    <p>Click anywhere to continue</p>
+  </section>
+
+  <div class="publication" id="publication" hidden>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="brand" href="index.html"><span class="brand__name">Reject the Terms</span><span class="brand__sub">An independent technology gazette</span></a>
+        <nav class="site-nav" aria-label="Primary navigation"><ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="articles.html">Articles</a></li><li><a href="recommendations.html">Recommendations</a></li></ul></nav>
+      </div>
+    </header>
+
+    <main id="main" class="newspaper-home">
+      <header class="home-masthead container">
+        <div class="masthead-rule"><span>Privacy</span><span>Security</span><span>Technology</span></div>
+        <p class="home-kicker">Independent reporting and Independent thinking</p>
+        <h1>Reject the Terms</h1>
+        <div class="masthead-meta"><span>Est. 2025</span><span>Read the fine print</span><span>No. 001</span></div>
+      </header>
+
+      <section class="home-lede container">
+        <p class="section-flag">The Sunday Edition</p>
+        <h2>Consent should be informed.<br>Refusal should be easy.</h2>
+        <p>Editorial work on fine print, consent fatigue, surveillance defaults, and the systems that hide behind routine clicks.</p>
+      </section>
+
+      <section class="print-stories container" aria-labelledby="latest-stories">
+        <div class="print-section-head"><h2 id="latest-stories">Latest Dispatches</h2><a href="articles.html">View the complete archive →</a></div>
+        <div class="print-story-grid">
+          <article class="print-story print-story--lead">
+            <a class="print-story__image" href="article-passwords.html"><img src="images/thumb-passwords.jpg" alt="Atmospheric thumbnail for Between Passwords and Paranoia"></a>
+            <p class="print-story__topic">Security &amp; Usability</p>
+            <h3><a href="article-passwords.html">Between Passwords and Paranoia</a></h3>
+            <p>Security and convenience aren't enemies; they're just different ways of trusting the same machine.</p>
+          </article>
+          <article class="print-story">
+            <a class="print-story__image" href="article-walmart-vizio.html"><img src="images/thumb-walmart-vizio.png" alt="Atmospheric thumbnail for Walmart and Vizio article"></a>
+            <p class="print-story__topic">Data &amp; Advertising</p>
+            <h3><a href="article-walmart-vizio.html">When Walmart Met Vizio</a></h3>
+            <p>What you watch can now shape what you're sold.</p>
+          </article>
+          <article class="print-story">
+            <a class="print-story__image" href="article-consent-exhaustion.html"><img src="images/thumb-sheep.jpg" alt="Sheep illustration for Consent by Exhaustion"></a>
+            <p class="print-story__topic">Consent &amp; Design</p>
+            <h3><a href="article-consent-exhaustion.html">Consent by Exhaustion</a></h3>
+            <p>A cookie banner can look like choice while making the private option harder to reach.</p>
+          </article>
         </div>
-        <button type="button" class="reject-button" data-reject aria-label="Reject terms and enter site">reject</button>
-      </div>
+      </section>
+    </main>
 
-      <div class="popup popup-fast">
-        <div class="popup-title">Fast Access!</div>
-        <p>Don't miss out! Accept now for instant access. This offer expires when you move the mouse.</p>
-        <button type="button" data-accept>Accept Now »</button>
-      </div>
-
-      <div class="popup popup-oneclick">
-        <div class="popup-title">One Click Access</div>
-        <p>One click is all it takes to unlock this website. Recommended by our setup wizard.</p>
-        <button type="button" data-accept>Click Here to Agree</button>
-      </div>
-
-      <div class="popup popup-required">
-        <div class="popup-title">You Must Agree</div>
-        <p>You must accept the Terms and Conditions to proceed.</p>
-        <button type="button" data-accept>OK</button>
-      </div>
-
-      <div class="popup popup-final">
-        <div class="popup-title">Final Acceptance Required</div>
-        <p>Access is not available until you complete final acceptance of the Terms and Conditions.</p>
-        <button type="button" data-accept>Accept</button>
-      </div>
-
-      <div class="popup popup-still">
-        <div class="popup-title">Still Here?</div>
-        <p>What are you waiting for? Accept already!</p>
-        <button type="button" data-accept>I Accept Already!</button>
-      </div>
-
-      <div class="popup popup-urgent">
-        <div class="popup-title">Important!</div>
-        <p>Your acceptance is legally required to continue.</p>
-        <button type="button" data-accept>Agree Now</button>
-      </div>
-
-      <div class="popup popup-proceed">
-        <div class="popup-title">Proceed?</div>
-        <p>Accept to proceed. Proceed to accept.</p>
-        <button type="button" data-accept>Proceed</button>
-      </div>
-
-      <div class="popup popup-secure">
-        <div class="popup-title">Secure Your Access</div>
-        <p>Accept the Terms and Conditions to unlock full access.</p>
-        <button type="button" data-accept>Accept and Enter Site</button>
-      </div>
-
-      <div class="popup popup-whywait">
-        <div class="popup-title">Why Wait?</div>
-        <p>Join thousands of users who accepted already. Don't get left behind!</p>
-        <button type="button" data-accept>Accept & Continue</button>
-      </div>
-
-      <div class="popup popup-almost">
-        <div class="popup-title">Almost Done!</div>
-        <p>Just one more step! Accept to finish.</p>
-        <button type="button" data-accept>Finish & Enter</button>
-      </div>
-      <div class="popup popup-bait popup-hot">
-        <div class="popup-title">FREE Privacy Scan</div>
-        <p>Your consent settings may be out of date. Run instant acceptance repair now.</p>
-        <button type="button" data-accept>Repair Settings</button>
-      </div>
-
-      <div class="popup popup-confirm popup-warning">
-        <div class="popup-title">Security Warning</div>
-        <p>Unsigned choice detected. To protect your experience, confirm agreement.</p>
-        <button type="button" data-accept>Yes</button>
-      </div>
-
-      <div class="popup popup-download popup-hot">
-        <div class="popup-title">Download Complete</div>
-        <p>terms_update.exe is ready. Click OK to install required policy components.</p>
-        <button type="button" data-accept>OK</button>
-      </div>
-    </div>
-  </div>
-
-  <div class="dialog-overlay hidden" data-accept-dialog aria-hidden="true" role="alertdialog" aria-modal="true" aria-labelledby="accept-dialog-title">
-    <div class="dialog-box">
-      <p id="accept-dialog-title">Please accept the terms and conditions</p>
-      <p>You must accept the terms and conditions to continue. This prompt will continue to appear until you accept.</p>
-      <div class="dialog-actions"><button type="button" data-accept-ok>OK</button></div>
-    </div>
+    <footer class="site-footer"><div class="container site-footer__inner"><p>Reject the Terms</p><p>Privacy / security / technology</p></div></footer>
   </div>
 </body>
 </html>
