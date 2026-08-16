@@ -200,6 +200,20 @@ body.articles-page .page-footer { color: var(--ink-soft); border-top: 3px double
 .article-layout .reading-container { color: var(--ink); font-size: 1.08rem; }
 .article-layout .reading-container > p:first-of-type::first-letter { float: left; margin: .08em .12em 0 0; font: 900 5.2rem/.72 var(--serif); }
 .article-layout h2, .article-layout h3 { margin-top: 2.5rem; padding-top: .6rem; border-top: 1px solid var(--ink); color: var(--ink); font-family: var(--serif); }
+.article-layout blockquote {
+  position: relative;
+  margin: 2.35rem clamp(1rem, 6vw, 3.5rem);
+  padding: .15rem 0 .15rem 1.6rem;
+  border: 0;
+  border-left: 4px double var(--ink);
+  color: var(--ink);
+  background: transparent;
+  font-size: 1.18rem;
+  font-style: italic;
+  line-height: 1.48;
+}
+.article-layout blockquote p { margin: 0; }
+.article-layout blockquote p + p { margin-top: .65rem; }
 .article-back-link { display: inline-block; margin-bottom: 2rem; font: 800 .7rem/1 var(--sans); letter-spacing: .09em; text-transform: uppercase; }
 .muted-note { color: var(--ink-soft); }
 code, pre { color: var(--ink); background: rgba(23,21,16,.06); }

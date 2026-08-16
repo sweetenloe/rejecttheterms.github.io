@@ -3,3 +3,4 @@ writing-topics.local.md
 __pycache__/
 .site-backups/
 .article-uploader-work/
+article_uploader.py
