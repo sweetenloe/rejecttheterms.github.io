@@ -417,6 +417,30 @@ body.terms-page .dialog-box:before {content:"Terms Alert";display:block;margin:-
   }
 }
 
+/* Scroll-driven zoom-and-blur treatment for article cover images. */
+.article-hero {
+  isolation: isolate;
+}
+
+.article-hero::before {
+  inset: -4%;
+  z-index: -1;
+  transform: scale(var(--article-hero-scale, 1.18));
+  filter: grayscale(1) blur(var(--article-hero-blur, 0px));
+  opacity: var(--article-hero-opacity, 1);
+  transform-origin: center center;
+  will-change: transform, filter, opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .article-hero::before {
+    transform: none;
+    filter: grayscale(1);
+    opacity: 1;
+    will-change: auto;
+  }
+}
+
 @media (max-width:760px) {
   body.terms-page .browser-toolbar {grid-template-columns:repeat(3,auto);font-size:11px;overflow:hidden;}
   body.terms-page .browser-toolbar span:nth-child(n+4) {display:none;}

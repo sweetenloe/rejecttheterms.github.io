@@ -271,6 +271,7 @@ def build_article_html(draft: ArticleDraft, cover_relative: str, body_html: str)
   <meta name="description" content="{description}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>

@@ -74,3 +74,32 @@
     });
   }
 })();
+
+(function () {
+  const hero = document.querySelector('.article-hero');
+  if (!hero || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  let framePending = false;
+
+  function updateArticleHero() {
+    const progress = Math.min(Math.max(window.scrollY / Math.max(hero.offsetHeight, 1), 0), 1);
+    const scale = 1.18 - (progress * 0.18);
+    const blur = progress * 10;
+    const opacity = 1 - (progress * 0.28);
+
+    hero.style.setProperty('--article-hero-scale', scale.toFixed(3));
+    hero.style.setProperty('--article-hero-blur', `${blur.toFixed(2)}px`);
+    hero.style.setProperty('--article-hero-opacity', opacity.toFixed(3));
+    framePending = false;
+  }
+
+  function requestArticleHeroUpdate() {
+    if (framePending) return;
+    framePending = true;
+    window.requestAnimationFrame(updateArticleHero);
+  }
+
+  updateArticleHero();
+  window.addEventListener('scroll', requestArticleHeroUpdate, { passive: true });
+  window.addEventListener('resize', requestArticleHeroUpdate);
+})();
