@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark light">
+<title>QR Code Safety</title>
+<style>
+*{box-sizing:border-box}html,body{width:100%;height:100%;margin:0}body{font-family:Consolas,'Courier New',monospace;background:#050805;color:#4cff76}#terminal{height:100dvh;overflow:auto;padding:clamp(16px,4vw,44px);font-size:clamp(12px,2.2vw,17px);line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere;text-shadow:0 0 7px #2eff6c66}#terminal::after{content:'█';animation:blink .65s step-end infinite}@keyframes blink{50%{opacity:0}}#warning{display:none;width:100%;min-height:100dvh;align-items:center;justify-content:center;padding:7vw;text-align:center;background:#fff;color:#000;font:900 clamp(34px,7vw,94px)/1.12 Arial,Helvetica,sans-serif;letter-spacing:-.035em}body.done{background:#fff}body.done #terminal{display:none}body.done #warning{display:flex}@media(prefers-reduced-motion:reduce){#terminal::after{animation:none}}
+</style>
+</head>
+<body>
+<main id="terminal" aria-label="Device information"></main>
+<main id="warning" role="alert">STOP SCANNING QR CODES THEY COULD BE MALICIOUS</main>
+<script>
+(()=>{
+  const term=document.querySelector('#terminal');
+  const lineDelay=92; // milliseconds between terminal lines
+  const pauseAfterText=3000; // how long to show the complete green console
+  const safe=(v)=>v==null||v===''?'Unavailable':String(v);
+  const add=(key,val)=>{ if(!document.body.classList.contains('done')){term.textContent+=`${key.padEnd(20)} ${safe(val)}\n`;term.scrollTop=term.scrollHeight;} };
+  const nav=navigator,screenInfo=window.screen;
+  const data=[
+    ['BROWSER',nav.userAgent],
+    ['PLATFORM',nav.userAgentData?.platform||nav.platform||'Unavailable'],
+    ['LANGUAGE',nav.language],
+    ['TIMEZONE',Intl.DateTimeFormat().resolvedOptions().timeZone],
+    ['LOCAL TIME',new Date().toLocaleString()],
+    ['DISPLAY',`${screenInfo.width} x ${screenInfo.height}`],
+    ['VIEWPORT',`${window.innerWidth} x ${window.innerHeight}`],
+    ['PIXEL RATIO',window.devicePixelRatio],
+    ['CPU THREADS',nav.hardwareConcurrency],
+    ['DEVICE MEMORY',nav.deviceMemory?`${nav.deviceMemory} GB (approx.)`:'Unavailable'],
+    ['TOUCH POINTS',nav.maxTouchPoints],
+    ['CONNECTION',nav.connection?.effectiveType||'Unavailable'],
+    ['ONLINE',nav.onLine?'Yes':'No'],
+    ['COOKIES ENABLED',nav.cookieEnabled?'Yes':'No'],
+    ['COLOR DEPTH',`${screenInfo.colorDepth} bit`]
+  ];
+  term.textContent='> INITIALIZING LOCAL BROWSER INSPECTION...\n> NO PERMISSIONS REQUESTED. NO DATA SENT.\n\n';
+  data.forEach(([key,val],i)=>setTimeout(()=>add(key,val),70+i*lineDelay));
+  const finishTime=70+(data.length-1)*lineDelay+pauseAfterText;
+  setTimeout(()=>{document.body.classList.add('done');document.title='QR Code Safety Warning';},finishTime);
+})();
+</script>
+</body>
+</html>
